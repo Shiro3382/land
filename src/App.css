@@ -1,156 +1,50 @@
-
-
 .App {
-  text-align: center;
-  padding: 20px;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: #f7f7f7;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
 
-
-
-.App-header {
-  background-color: #ffffff;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: calc(12px + 1.5vmin);
-  color: #333;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
 }
 
-
-h1 {
-  margin-bottom: 30px;
-  font-size: 2.5em;
-  color: black;
-  font-weight: 600;
-}
-
-
-
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 30px;
-}
-
-button {
-  padding: 12px 25px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  transition: background-color 0.3s, transform 0.2s;
-  font-weight: 500;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-button:hover {
-  background-color: #f0f0f0;
-  transform: translateY(-2px);
-}
-
-button.active {
-  background-color: #007bff;
-  color: #ffffff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-button:focus {
-  outline: none;
-  border-color: #007bff;
-}
-
-
-.continent {
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 30px;
-  max-width: 700px;
-  width: 100%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
-}
-
-h2 {
-  font-size: 2em;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-p {
-  font-size: 1.1em;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin-top: 20px;
-}
-
-li {
-  padding: 12px;
-  border-bottom: 1px solid #eee;
-  transition: background-color 0.3s, transform 0.2s;
-  font-size: 1.1em;
-  color: #333;
-}
-
-li:last-child {
-  border-bottom: none;
-}
-
-li:hover {
-  background-color: #f8f8f8;
-  transform: translateX(5px);
-}
-
-
-@media (max-width: 768px) {
-  .App-header {
-    padding: 15px;
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-
-  .buttons {
-    gap: 8px;
-  }
-
-  button {
-    padding: 10px 18px;
-    font-size: 14px;
-  }
-
-  .continent {
-    padding: 20px;
-    width: 90%;
-  }
-
-  h2 {
-    font-size: 1.8em;
+  100% {
+    transform: rotate(360deg);
   }
 }
 
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.8em;
-  }
-
-  button {
-    padding: 8px 15px;
-    font-size: 14px;
-  }
-
-  .continent {
-    padding: 15px;
-    width: 100%;
-  }
+.country-card {
+  transition: all 0.3s ease;
+  width: 150px;
+  height: auto;
 }
+
+.country-card img {
+  width: 150px;
+  height: auto;
+}
+
+.country-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.flag-image {
+  width: 100px;
+  height: auto;
+}
+
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
